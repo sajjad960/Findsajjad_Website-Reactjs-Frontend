@@ -1,10 +1,25 @@
+:root {
+  --clr-green-light: #55d53e;
+  --clr-green-dark: #349b22;
+  --clr-red-dark: #f75a75;
+  --clr-red-light: #f7788d;
+
+}
+html {
+  overflow-x: hidden;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+}
+
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
   -webkit-font-smoothing: antialiased;
+  font-family: 'Roboto', sans-serif;
   -moz-osx-font-smoothing: grayscale;
+  color: white;
 }
 
 code {

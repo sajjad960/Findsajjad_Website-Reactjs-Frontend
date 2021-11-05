@@ -11,7 +11,9 @@ export const NavBar = () => {
         <Wrapper>
             <div className="navbar-container">
             <div className="logo-area">
+                <Link to='/'>
                 <img src={logo} alt="" className='logo'/>
+                </Link>
             </div>
 
             <div className="nav-area">
@@ -37,6 +39,9 @@ export const NavBar = () => {
 
 const Wrapper = styled.div`
     background-color: #000;
+    position: relative;
+    z-index: 5000;
+    
 
     .navbar-container {
         display: flex;
@@ -45,28 +50,41 @@ const Wrapper = styled.div`
     }
 
     .logo-area {
-        
+        margin-left: 7rem;
+        transition: all 1s;
+        &:hover {
+            transform: rotate(360deg);
+            filter: opacity(0.6);
+        }
     }
     .logo {
      width: 4rem;
      height: 4rem;
       padding: 2rem;
+
     }
 
     // ul
     .nav-area {
         &_links {
             list-style: none;
-            
     
             li {
                 display: inline-block;
             }
         }
         &_link {
-            margin-right: 1rem;
+            margin-right: 2.5rem;
             text-decoration: none;
             color: white;
+            font-weight: 500;
+            font-size: 1.35rem;
+            transition: all .1s;
+            
+            &:hover {
+                border-bottom: 2px solid var(--clr-green-light);
+                color: var(--clr-green-light);
+            }
         }
     }
 `
