@@ -38,6 +38,7 @@ const Wrapper = styled.div`
            color: white !important;
        }
    }
+
    .try_free_text {
     color: black;
     font-size: 1.3rem;
@@ -46,7 +47,15 @@ const Wrapper = styled.div`
     display: block;
     font-family: 'Roboto', sans-serif;
     transition: all .4s;
-   
     
    }
+  
+   @media (max-width: 1700px) {
+       .try_free_text {
+           font-size: 1.1rem;
+        }
+        
+    }
+    
+   
 `

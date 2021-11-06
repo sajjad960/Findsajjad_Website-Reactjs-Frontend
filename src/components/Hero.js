@@ -5,7 +5,6 @@ import { GetStartBtn } from '.';
 
 export const Hero = () => {
     
-
      // animated svg area start
      const svgcontainer = useRef(null)
 
@@ -42,8 +41,7 @@ export const Hero = () => {
 
 const Wrapper = styled.div`
     background-color: black;
-    height: 71vh;
-    padding: 1rem 0 7rem 0;
+    padding: 1rem 0 9rem 0;
 
     .container {
         display: flex;
@@ -70,6 +68,44 @@ const Wrapper = styled.div`
         }
     }
 
+    @media (max-width: 1700px) {
+        .text_area_heading {
+            font-size: 3rem;
+        }
+        .text_area_para {
+            font-size: 1.2rem;
+            margin-top: .9rem;
+        }
+    }
+
+    @media (max-width: 1400px) {
+        .text_area_heading {
+            font-size: 2.5rem;
+        }
+        .text_area_para {
+            font-size: 1.1rem;
+            margin-top: 1rem;
+        }
+
+        .text_area {
+       margin-left: 9rem;
+        }
+    }
+    @media (max-width: 1100px) {
+        .text_area_heading {
+            font-size: 2rem;
+        }
+        .text_area_para {
+            font-size: 1rem;
+            margin-top: 1rem;
+        }
+
+        .text_area {
+       margin-left: 5rem;
+        }
+    }
+
+
 
     .animation_area { 
        width: 60%;
@@ -80,6 +116,69 @@ const Wrapper = styled.div`
     .svgcontainer {
         width: 85%;
        position: relative;
+    }
+
+    @media (max-width: 1700px) {
+        .animation_area { 
+       width: 60%;
+       margin-top: -1rem;
+        }
+    }
+
+    @media (max-width: 1100px) {
+        .animation_area { 
+       width: 60%;
+       margin-top: -0rem;
+       
+    }
+    }
+
+
+    // for mobile
+    //900px
+    @media (max-width: 900px) {
+        padding: 1rem 0 4rem 0;
+      .container {
+          flex-direction: column;
+      }
+
+      .text_area {
+       width: 80%;
+       margin-left: 3rem;
+       margin-top: 9rem;
+        &_heading {
+            font-size: 3rem;
+        }
+    }
+    .animation_area {
+        width: 100%;
+        margin-top: -3rem;
+       margin-left: 5rem;
+    }
+
+    }
+
+    //600px
+    @media (max-width: 600px) {
+        padding: 1rem 0 4rem 0;
+      .container {
+          flex-direction: column;
+      }
+
+      .text_area {
+       width: 80%;
+       margin-left: 3rem;
+       margin-top: 7rem;
+        &_heading {
+            font-size: 2.5rem;
+        }
+    }
+    .animation_area {
+        width: 100%;
+        margin-top: -3rem;
+       margin-left: 5rem;
+    }
+
     }
  
 `

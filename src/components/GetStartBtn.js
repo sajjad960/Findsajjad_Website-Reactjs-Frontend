@@ -67,4 +67,24 @@ const Wrapper = styled.div`
    
     
    }
+
+   @media (max-width: 1700px) {
+       .try_free_text {
+           font-size: 1.2rem;
+        }
+        
+    }
+    @media (max-width: 1400px) {
+       button {
+       margin-top: 1.2rem;
+       }
+        
+    }
+
+    @media (max-width: 900px) {
+        .try_free_text {
+           font-size: 1.3rem;
+        }
+        
+    }
 `
