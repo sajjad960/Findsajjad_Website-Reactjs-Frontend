@@ -151,10 +151,12 @@ const Wrapper = styled.div`
         }
     }
     .animation_area {
-        width: 100%;
+        width: 90%;
         margin-top: -3rem;
        margin-left: 5rem;
     }
+
+  
 
     }
 
@@ -174,7 +176,7 @@ const Wrapper = styled.div`
         }
     }
     .animation_area {
-        width: 100%;
+        width: 90%;
         margin-top: -3rem;
        margin-left: 5rem;
     }

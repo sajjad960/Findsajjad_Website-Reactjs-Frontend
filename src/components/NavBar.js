@@ -1,12 +1,17 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
+import { FaBars } from "react-icons/fa";
 import styled from 'styled-components'
 import logo from '../assets/img/logo.png'
 import { TryFreeBtn } from '../components'
+import { useGlobalContext } from '../context/globalContext'
 import { links } from '../Data/constant'
+import { Sidebar } from './Sidebar'
 
 
 export const NavBar = () => {
+const { openSidebar } = useGlobalContext();
+
     return (
         <Wrapper>
             <div className="navbar-container">
@@ -31,7 +36,18 @@ export const NavBar = () => {
                 </ul>
             </div>
 
+            <div className='btn'>
             <TryFreeBtn/>
+            </div>
+
+            {/* for sidebar */}
+            <button
+            type="button"
+            className="nav-toggle"
+            onClick={() => openSidebar()}
+          >
+            <FaBars />
+          </button>
             </div>
         </Wrapper>
     )
@@ -64,6 +80,10 @@ const Wrapper = styled.div`
 
     }
 
+    .nav-toggle {
+        display: none;
+    }
+
     // ul
     .nav-area {
         &_links {
@@ -86,5 +106,37 @@ const Wrapper = styled.div`
                 color: var(--clr-green-light);
             }
         }
+    }
+
+    // for sidebar
+    @media (max-width: 900px) {
+
+        .navbar-container {
+            justify-content: center;
+        }
+
+      .nav-area {
+          display: none;
+      }
+
+      .btn {
+          display: none;
+      }
+
+      .logo-area {
+        margin: 0;
+      }
+
+      .nav-toggle {
+    display: block;
+    background: transparent;
+    border: transparent;
+    color: #ffffffd4;
+    cursor: pointer;
+    svg {
+      font-size: 3.4rem;
+    }
+      }
+        
     }
 `
