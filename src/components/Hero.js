@@ -182,5 +182,26 @@ const Wrapper = styled.div`
     }
 
     }
+
+    //600px
+    @media (max-width: 500px) {
+        padding: 1rem 0 4rem 0;
+     
+
+      .text_area {
+       width: 80%;
+       margin-left: 3rem;
+       margin-top: 7rem;
+        &_heading {
+            font-size: 2rem;
+        }
+    }
+    .animation_area {
+        width: 90%;
+        margin-top: -3rem;
+       margin-left: 5rem;
+    }
+
+    }
  
 `

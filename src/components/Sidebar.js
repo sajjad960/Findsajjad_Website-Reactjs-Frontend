@@ -115,14 +115,12 @@ const SidebarContainer = styled.div`
     transform: translate(0);
     z-index: 999;
   }
-  .cart-btn-wrapper {
-    margin: 2rem auto;
-  }
+
 
   .try_free_btn {
       position: absolute;
       bottom: 20%;
-      left: 38%;
+      left: 30%;
   }
 
   @media screen and (min-width: 900px) {
