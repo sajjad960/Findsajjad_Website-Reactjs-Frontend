@@ -13,5 +13,5 @@ export const links = [
       id: 3,
       text: "Contacts",
       url: "/contact",
-    },
+    }
   ];

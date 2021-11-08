@@ -28,18 +28,32 @@ const location = useLocation()
                             location.pathname !== '/' ? <li >
                             <Link className='nav-area_link' key='15' to='/'>Home</Link>
                             </li> : ''
-                         }   
+                         }
+                         
                     {
                         links.map((link) => {
                             const {id, text, url} = link
-                            return (
-                                <li key={id}>
-                                    <Link className='nav-area_link' to={url}>{text}</Link>
-                                </li>
-                            )
+                            if(location.pathname !== url) {
+                                return (
+                                    <li key={id}>
+                                        <Link className='nav-area_link' to={url}>{text}</Link>
+                                    </li>
+                                )
+                            } else {
+                                return ''
+                            }
                             
 
                         })
+
+                        
+                    }
+
+                    {/* showing projects link btn */}
+                    {
+                            location.pathname === '/' ? <li >
+                            <a className='nav-area_link'>Projects</a>
+                            </li> : ''
                     }
                          
                 </ul>
@@ -65,6 +79,7 @@ const location = useLocation()
 const Wrapper = styled.div`
     background-color: #000;
     position: relative;
+    padding: 1rem 0;
     z-index: 5000;
     
 
@@ -85,7 +100,7 @@ const Wrapper = styled.div`
     .logo {
      width: 4rem;
      height: 4rem;
-      padding: 2rem;
+      padding: 1rem;
 
     }
 

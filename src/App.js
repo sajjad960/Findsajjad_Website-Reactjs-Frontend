@@ -4,6 +4,7 @@ import { Home } from "./pages";
 import {NavBar} from './components'
 import { Sidebar } from "./components/Sidebar";
 import { CustomCursor } from "./components/CustomCursor";
+import { Me } from "./pages/Me";
 
 
 
@@ -18,8 +19,8 @@ function App() {
         <Route exact path="/">
          <Home/>
         </Route>
-        <Route exact path="/about">
-          
+        <Route exact path="/me">
+          <Me/>
         </Route>
     
         <Route exact path="/cart">
