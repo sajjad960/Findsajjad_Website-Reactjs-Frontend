@@ -1,5 +1,5 @@
 import React from 'react'
-import { Link } from 'react-router-dom'
+import { Link, useLocation } from 'react-router-dom'
 import { FaBars } from "react-icons/fa";
 import styled from 'styled-components'
 import logo from '../assets/img/logo.png'
@@ -11,6 +11,7 @@ import { Sidebar } from './Sidebar'
 
 export const NavBar = () => {
 const { openSidebar } = useGlobalContext();
+const location = useLocation()
 
     return (
         <Wrapper>
@@ -23,6 +24,11 @@ const { openSidebar } = useGlobalContext();
 
             <div className="nav-area">
                 <ul className="nav-area_links">
+                        {
+                            location.pathname !== '/' ? <li >
+                            <Link className='nav-area_link' key='15' to='/'>Home</Link>
+                            </li> : ''
+                         }   
                     {
                         links.map((link) => {
                             const {id, text, url} = link
@@ -31,8 +37,11 @@ const { openSidebar } = useGlobalContext();
                                     <Link className='nav-area_link' to={url}>{text}</Link>
                                 </li>
                             )
+                            
+
                         })
                     }
+                         
                 </ul>
             </div>
 

@@ -5,8 +5,9 @@
   --clr-red-light: #f7788d;
 
 }
-html {
+html, body, a {
   overflow-x: hidden;
+  cursor: none;
 }
 
 * {

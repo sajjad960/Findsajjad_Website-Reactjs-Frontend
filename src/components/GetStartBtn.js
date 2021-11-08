@@ -6,7 +6,7 @@ export const GetStartBtn = () => {
     return (
     <Wrapper>
         <button>
-            <Link className='try_free_text'>Get Started</Link>
+            <Link to='' className='try_free_text'>Get Started</Link>
         </button>
     </Wrapper>
     )
@@ -27,7 +27,7 @@ const Wrapper = styled.div`
        display: inline-block;
        border: none;
       
-       cursor: pointer;
+       cursor: none;
        transition: all .3s;
         
        &:hover,
