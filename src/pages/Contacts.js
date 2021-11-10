@@ -1,11 +1,9 @@
 import React from 'react'
 import { ComingSoon } from '../components/ComingSoon'
-import { MeCard } from '../components/MeCard'
 
-export const Me = () => {
+export const Contacts = () => {
     return (
         <div>
-            <MeCard/>
             <ComingSoon/>
         </div>
     )

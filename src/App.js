@@ -5,6 +5,8 @@ import {NavBar} from './components'
 import { Sidebar } from "./components/Sidebar";
 import { CustomCursor } from "./components/CustomCursor";
 import { Me } from "./pages/Me";
+import { ComingSoon } from "./components/ComingSoon";
+import { Price } from "./pages/Price";
 
 
 
@@ -23,11 +25,11 @@ function App() {
           <Me/>
         </Route>
     
-        <Route exact path="/cart">
-         
+        <Route exact path="/price">
+          <Price/>
         </Route>
-        <Route exact path="/products">
-         
+        <Route exact path="/contact">
+          <ComingSoon/>
         </Route>
         
         <Route path="*">
