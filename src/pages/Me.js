@@ -6,7 +6,6 @@ export const Me = () => {
     return (
         <div>
             <MeCard/>
-            <ComingSoon/>
         </div>
     )
 }
