@@ -123,6 +123,7 @@ const Wrapper = styled.div`
         margin-right: .5rem;
     }
 
+
     //animation
 
     @keyframes widthBig {
