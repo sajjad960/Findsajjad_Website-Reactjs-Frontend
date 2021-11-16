@@ -15,25 +15,27 @@ export const MeCard = () => {
                  
                 </div>
 
-                <div className="social_links">
-                    socail links
+                <div className="about_me">
+                    <div className="text_area">
+                        <div className='text_area-box'>
+                            <p>
+                            Hi!<br/>
+                            Me = Sajjad.<br/>
+                            I can work as a <span>Frontend</span> and <br/><span>Backend</span> developer.
+                            </p>
+                        <h3>Currently Working On : <span>React Js, Node Js/Express Js, MongoDB.</span></h3>
+                        </div>
+                    </div>
                 </div>
 
             </div>
 
-            <div className="text_area">
-                <div className='text_area-box'>
-                    Hi!
-                    Me = Sajjad 🤪. <br/>
-                    I can work as a Frontend and Backend developer.
-                </div>
-            </div>
         </Wrapper>
     )
 }
 
 const Wrapper = styled.div`
-    padding: 3.5% 3% .5% 4%;
+    padding: 3.5% 3% .5% 10%;
 
     .hr {
         width: 2rem;
@@ -60,6 +62,37 @@ const Wrapper = styled.div`
         grid-gap: 1rem;
         grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
         
+    }
+
+    .text_area {
+        position: relative;
+        margin-bottom: 10%;
+        
+        &-box {
+            /* position: absolute;
+            bottom: 50%;
+           right: 20%; */
+            margin-bottom: .5rem;
+            /* background-image: linear-gradient(to right bottom, #ffffff3d, black); */
+            padding-top: 15% !important;
+            padding: 1.5rem;
+            p {
+                font-size: 2.1rem;
+                color: white;
+
+                span {
+                    color: var(--clr-red-dark);
+                    font-size: 2.4rem;
+                }
+            }
+
+            h3 {
+                font-size: 1.6rem;
+                color: var(--clr-green-light);
+            }
+
+        }
+
     }
 
     //animation
