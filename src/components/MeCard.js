@@ -1,5 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
+import { SocialIcon } from 'react-social-icons';
 import me from '../assets/img/me/me.jpeg'
 
 export const MeCard = () => {
@@ -23,7 +24,16 @@ export const MeCard = () => {
                             Me = Sajjad.<br/>
                             I can work as a <span>Frontend</span> and <br/><span>Backend</span> developer.
                             </p>
-                        <h3>Currently Working On : <span>React Js, Node Js/Express Js, MongoDB.</span></h3>
+
+                            <div className='currently-me'>
+                                <h3>Currently Working On : <span>React Js, Node Js/Express Js, MongoDB.</span></h3>
+                                <h3>Currently Learning : <span>Linux, Nginx, Digitalocean</span></h3>
+
+                                <div className='socials-links'>
+                                <SocialIcon className='social-btn' bgColor='#1185df' fgColor='white' url="https://twitter.com/jaketrent" url='https://web.facebook.com/profile.php?id=100036893913011' />
+                                <SocialIcon className='social-btn' url="https://twitter.com/SajjadH40513194"/>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -68,6 +78,7 @@ const Wrapper = styled.div`
         position: relative;
         margin-bottom: 10%;
         
+        
         &-box {
             /* position: absolute;
             bottom: 50%;
@@ -76,9 +87,11 @@ const Wrapper = styled.div`
             /* background-image: linear-gradient(to right bottom, #ffffff3d, black); */
             padding-top: 15% !important;
             padding: 1.5rem;
+
             p {
                 font-size: 2.1rem;
                 color: white;
+                margin-bottom: 2rem;
 
                 span {
                     color: var(--clr-red-dark);
@@ -87,12 +100,27 @@ const Wrapper = styled.div`
             }
 
             h3 {
-                font-size: 1.6rem;
+                margin-top: .5rem;
+                font-weight: 400;
+                font-size: 1.8rem;
                 color: var(--clr-green-light);
+
+                span {
+                    color: white;
+                    font-size: 1.6rem;
+                }
             }
 
         }
 
+    }
+
+    .socials-links {
+        margin-top: 1rem;
+    }
+
+    .social-btn {
+        margin-right: .5rem;
     }
 
     //animation
