@@ -29,7 +29,7 @@ export const MeCard = () => {
 
                                 <div className='currently-me'>
                                     <h3>Currently Working On : <span>React Js, Node Js/Express Js, MongoDB.</span></h3>
-                                    <h3>Currently Learning : <span>Linux, Nginx, Digitalocean.</span></h3>
+                                    <h3>Currently Learning : <span>Linux, Nginx, Digitalocean{'(Cloud)'}.</span></h3>
 
                                     <div className='socials-links'>
                                     <SocialIcon className='social-btn' bgColor='#1185df' fgColor='white' url="https://twitter.com/jaketrent" url='https://web.facebook.com/profile.php?id=100036893913011' target = "_blank" />
