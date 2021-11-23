@@ -181,6 +181,11 @@ const Wrapper = styled.div`
        margin-left: 5rem;
     }
 
+    .svgcontainer {
+        width: 100%;
+       position: relative;
+    }
+
     }
 
     //600px
@@ -190,16 +195,21 @@ const Wrapper = styled.div`
 
       .text_area {
        width: 80%;
-       margin-left: 3rem;
+       margin-left: 1rem;
        margin-top: 7rem;
         &_heading {
-            font-size: 2rem;
+            font-size: 1.7rem;
         }
     }
     .animation_area {
         width: 90%;
         margin-top: -3rem;
-       margin-left: 5rem;
+       margin-left: .5rem;
+    }
+
+    .svgcontainer {
+        width: 100%;
+       position: relative;
     }
 
     }

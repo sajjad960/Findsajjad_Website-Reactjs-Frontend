@@ -74,6 +74,7 @@ const Wrapper = styled.div`
     .photo_area {
        
         text-align: center;
+        margin-right: 2rem;
     }
     .me {
         width: 55%;
@@ -255,7 +256,9 @@ const Wrapper = styled.div`
 
             .me {
                 width: 100%;
+               
                 padding: .5rem;
+             
             }
         }
     

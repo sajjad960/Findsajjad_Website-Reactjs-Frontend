@@ -4,12 +4,13 @@ import { useGlobalContext } from '../context/globalContext';
 import { FaTimes } from 'react-icons/fa';
 import {links} from '../Data/constant'
 import logo from '../assets/img/logo.png'
-import { Link } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
 import { TryFreeBtn } from '.';
 
 
 export const Sidebar = () => {
 const { isSidebarOpen, closeSidebar } = useGlobalContext();
+const location = useLocation()
 
     return (
         <SidebarContainer>
@@ -27,17 +28,33 @@ const { isSidebarOpen, closeSidebar } = useGlobalContext();
             </button>
           </div>
           <ul className="links">
+          {
+            location.pathname !== '/' ? <li >
+            <Link className='nav-area_link' onClick={closeSidebar} key='home' to='/'>Home</Link>
+            </li> : ''
+          }
+
             {links.map((link) => {
               const { id, text, url } = link;
-              return (
-                <li key={id} onClick={closeSidebar}>
-                  <Link to={url}>{text}</Link>
-                </li>
-              );
+              
+              if(location.pathname !== url) {
+                  return (
+                    <li key={id} onClick={closeSidebar}>
+                    <Link to={url}>{text}</Link>
+                  </li>
+                  )
+              } else {
+                  return ''
+              }
+               
+              
             })}
-            <li>
-           
-            </li>
+
+            {
+                location.pathname === '/' ? <li >
+                <a className='nav-area_link' onClick={closeSidebar}>Projects</a>
+                </li> : ''
+            }
           </ul>
 
           <div className='try_free_btn'>
@@ -55,6 +72,7 @@ const SidebarContainer = styled.div`
   position: relative;
   z-index: 50000;
   font-size: 1.8rem;
+  
   .sidebar-header {
     display: flex;
     justify-content: space-between;
@@ -119,7 +137,7 @@ const SidebarContainer = styled.div`
 
   .try_free_btn {
       position: absolute;
-      bottom: 20%;
+      bottom: 15%;
       left: 30%;
   }
 
@@ -128,4 +146,12 @@ const SidebarContainer = styled.div`
       display: none;
     }
   }
+
+  @media screen and (min-width: 900px) {
+    .try_free_btn {
+      position: absolute;
+      bottom: 10%;
+      left: 30%;
+  }
+
 `;
