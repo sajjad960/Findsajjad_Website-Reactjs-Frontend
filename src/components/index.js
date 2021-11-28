@@ -1,4 +1,4 @@
-import { Hero } from "./Hero";
+// import { Hero } from "./Hero";
 import { Error } from "./Error";
 import { NavBar } from "./NavBar";
 import { GetStartBtn } from "./GetStartBtn";
@@ -8,7 +8,7 @@ import { Footer } from "./Footer";
 
 
 export {
-    Hero,
+    // Hero,
     Error,
     NavBar,
     GetStartBtn,

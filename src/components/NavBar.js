@@ -2,11 +2,9 @@ import React from 'react'
 import { Link, useLocation } from 'react-router-dom'
 import { FaBars } from "react-icons/fa";
 import styled from 'styled-components'
-import logo from '../assets/img/logo.png'
 import { TryFreeBtn } from '../components'
 import { useGlobalContext } from '../context/globalContext'
 import { links } from '../Data/constant'
-import { Sidebar } from './Sidebar'
 
 
 export const NavBar = () => {
@@ -18,7 +16,7 @@ const location = useLocation()
             <div className="navbar-container">
             <div className="logo-area">
                 <Link to='/'>
-                <img src={logo} alt="" className='logo'/>
+                <img src={`${process.env.REACT_APP_HOST_ADDRESS}logo.png`} alt="FS" className='logo'/>
                 </Link>
             </div>
 

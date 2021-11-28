@@ -1,22 +1,32 @@
-import Lottie from 'lottie-web';
 import React, { useEffect, useRef } from 'react'
 import styled from 'styled-components'
-import { GetStartBtn } from '.';
+import { GetStartBtn } from './GetStartBtn';
+import lottie from 'lottie-web';
 
-export const Hero = () => {
+const Hero = () => {
     
      // animated svg area start
      const svgcontainer = useRef(null)
 
      useEffect(() => {
-         Lottie.loadAnimation({
-           container: svgcontainer.current,
-           renderer: 'svg',
-           loop: true,
-           autoplay: true,
-           animationData: require('../assets/svg/70654-graphic-designer.json')
+         let loadUrl;
+         if(process.env.REACT_APP_APP_MODE === 'development') {
+           loadUrl='http://localhost:3000/json/70654-graphic-designer.json'
+         }
+         if(process.env.REACT_APP_APP_MODE === 'production') {
+             loadUrl=`${process.env.REACT_APP_HOST_ADDRESS}json/70654-graphic-designer.json`
+         }
+         fetch(loadUrl).then(async response => {
+             const animationData = await response.json();
+             lottie.loadAnimation({
+                 container: svgcontainer.current,
+                 renderer: 'svg',
+                 loop: true,
+                 autoplay: true,
+                 animationData
+               })
          })
-       }, []);
+   }, []);
      // animated svg area end
 
     return (
@@ -215,3 +225,5 @@ const Wrapper = styled.div`
     }
  
 `
+
+export default Hero
