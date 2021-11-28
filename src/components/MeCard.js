@@ -1,7 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
 import { SocialIcon } from 'react-social-icons';
-import me from '../assets/img/me/me.jpeg'
 
 export const MeCard = () => {
 
@@ -14,7 +13,12 @@ export const MeCard = () => {
                     <div className="photo_area">
                         <h2 className='mern-text'>I am MERN stack developer</h2>
                         <hr className='hr'/>
-                        <img src={me} className='me' alt="Me" />
+
+                         <picture>
+                            <source media="(min-width:700px)" srcSet="https://live.staticflickr.com/65535/51711967354_32cce83e18_c.jpg"/>
+                            <source media="(max-width:700px)" srcSet="https://live.staticflickr.com/65535/51711297426_71c283d9d3_w.jpg"/>
+                            <img src="https://live.staticflickr.com/65535/51711967354_32cce83e18_c.jpg" alt="Flowers" className='me'/>
+                        </picture>
                     
                     </div>
 

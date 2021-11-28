@@ -3,9 +3,8 @@ import styled from 'styled-components';
 import { useGlobalContext } from '../context/globalContext';
 import { FaTimes } from 'react-icons/fa';
 import {links} from '../Data/constant'
-import logo from '../assets/img/logo.png'
 import { Link, useLocation } from 'react-router-dom';
-import { TryFreeBtn } from '.';
+import { TryFreeBtn } from '../components';
 
 
 export const Sidebar = () => {
@@ -17,7 +16,7 @@ const location = useLocation()
         <aside className={isSidebarOpen ? "sidebar show-sidebar" : "sidebar"}>
           <div className="sidebar-header">
               <Link  to='/' onClick={closeSidebar}>
-                <img src={logo} alt="logo" className="logo" />
+                <img src={`${process.env.REACT_APP_HOST_ADDRESS}logo.png`} alt="FS" className="logo" />
               </Link>
             <button
               className="close-btn"

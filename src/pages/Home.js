@@ -1,10 +1,16 @@
-import React from 'react'
-import {Hero} from '../components'
+import React, { lazy } from 'react'
+// import Hero from '../components'
 
-export const Home = () => {
+const Hero = lazy(() => import('../components/Hero'));
+
+
+const Home = () => {
     return (
         <main>
             <Hero></Hero>
         </main>
     )
 }
+
+
+export default Home
