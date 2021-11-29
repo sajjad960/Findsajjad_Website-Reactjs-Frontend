@@ -96,10 +96,23 @@ const Wrapper = styled.div`
         }
     }
     .logo {
-     width: 4rem;
-     height: 4rem;
-      padding: 1rem;
+     width: 4.5rem;
+     height: 4.5rem;
+     padding: 1rem;
 
+    }
+
+    @media (max-width: 900px) {
+        .logo {
+            width: 4rem;
+            height: 4rem;
+        }
+    }
+    @media (max-width: 1500px) {
+        .logo {
+            width: 4rem;
+            height: 4rem;
+        }
     }
 
     .nav-toggle {
