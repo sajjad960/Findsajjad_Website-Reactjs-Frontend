@@ -1,6 +1,6 @@
-import React, { lazy, Suspense } from "react";
+import React, { lazy, Suspense, useEffect, useState } from "react";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
-// import { Home } from "./pages";
+import Home from "./pages/Home";
 import {NavBar} from './components'
 // import {Bip} from "./components/Bip";
 import CustomCursor from "./components/CustomCursor";
@@ -9,11 +9,23 @@ import { Me } from "./pages/Me";
 import { ComingSoon } from "./components/ComingSoon";
 import { Price } from "./pages/Price";
 import { ErrorPage } from "./pages/ErrorPage";
+import Loading from "./components/Loading";
 
-const Home = lazy(() => import('./pages/Home'));
 
 
 function App() {
+  const [ spinner, setSpinner ] = useState(true);
+
+  useEffect(() => {
+    setTimeout(() => setSpinner(false), 3000)
+  }, []);
+
+  if(spinner) {
+    return (
+      <Loading/>
+    )
+  }
+
   return (
     <div className="App">
       <Router>
