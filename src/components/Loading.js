@@ -17,8 +17,8 @@ const Wrapper = styled.div`
     ;
      .loader-logo {
             margin-top: 41vh;
-             width: 7rem;
-             height: 7rem;
+             width: 5rem;
+             height: 5rem;
             animation: rotate 1.5s ease infinite;
         }
     @media (max-width: 1000px) {
