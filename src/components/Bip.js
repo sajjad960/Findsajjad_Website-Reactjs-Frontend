@@ -1,8 +1,8 @@
-import Lottie from 'lottie-web';
 import React, { useEffect, useRef } from 'react'
 import styled from 'styled-components';
+import Lottie from 'lottie-web';
 
-const Bip = () => {
+export const Bip = () => {
 
      // animated svg area start
      const animationcontainer = useRef(null)
@@ -10,7 +10,7 @@ const Bip = () => {
      useEffect(() => {
            
          fetch('https://assets10.lottiefiles.com/packages/lf20_yigwlgip.json').then(async response => {
-             const animationData = await response.json();
+             let animationData = await response.json();
              console.log(response);
               let animation = Lottie.loadAnimation({
                  container: animationcontainer.current,
@@ -53,6 +53,3 @@ const Wrapper = styled.div`
     }
 
 `
-
-
-export default Bip

@@ -2,6 +2,8 @@ import React, { lazy, Suspense } from "react";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 // import { Home } from "./pages";
 import {NavBar} from './components'
+// import {Bip} from "./components/Bip";
+import CustomCursor from "./components/CustomCursor";
 import { Sidebar } from "./components/Sidebar";
 import { Me } from "./pages/Me";
 import { ComingSoon } from "./components/ComingSoon";
@@ -9,28 +11,20 @@ import { Price } from "./pages/Price";
 import { ErrorPage } from "./pages/ErrorPage";
 
 const Home = lazy(() => import('./pages/Home'));
-const Bip = lazy(() => import('./components/Bip'));
-const CustomCursor = lazy(() => import('./components/CustomCursor'));
-
-
 
 
 function App() {
   return (
     <div className="App">
       <Router>
-        <Suspense fallback={''}>
           <CustomCursor/>
-        </Suspense>
         <NavBar/>
         <Sidebar/>
-        <Suspense fallback={''}>
-            <Bip/>
-        </Suspense>
+        {/* <Bip/> */}
         <Switch>
           <Route exact path="/">
-            <Suspense fallback={''}>
-            <Home/>
+            <Suspense fallback=''>
+              <Home/>
             </Suspense>
           </Route>
           <Route exact path="/me">
