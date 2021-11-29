@@ -6,26 +6,22 @@ import lottie from 'lottie-web';
 const Hero = () => {
     
      // animated svg area start
-     const svgcontainer = useRef(null)
+     const animationcontainer = useRef(null)
 
      useEffect(() => {
-         let loadUrl;
-         if(process.env.REACT_APP_APP_MODE === 'development') {
-           loadUrl='http://localhost:3000/json/70654-graphic-designer.json'
-         }
-         if(process.env.REACT_APP_APP_MODE === 'production') {
-             loadUrl=`${process.env.REACT_APP_HOST_ADDRESS}json/70654-graphic-designer.json`
-         }
-         fetch(loadUrl).then(async response => {
+
+         fetch('https://assets6.lottiefiles.com/packages/lf20_cpjhqupu.json').then(async response => {
              const animationData = await response.json();
+             console.log(response);
              lottie.loadAnimation({
-                 container: svgcontainer.current,
+                 container: animationcontainer.current,
                  renderer: 'svg',
                  loop: true,
                  autoplay: true,
                  animationData
                })
          })
+
    }, []);
      // animated svg area end
 
@@ -40,7 +36,7 @@ const Hero = () => {
             </div>
 
             <div className="animation_area">
-                <div className="svgcontainer" ref={svgcontainer}></div>
+                <div className="svgcontainer" ref={animationcontainer}></div>
             </div>
 
             </div>
@@ -64,6 +60,12 @@ const Wrapper = styled.div`
        width: 50%;
        margin-left: 13rem;
        margin-top: 6rem;
+       animation-name: moveInLeft;
+       animation-duration: 1s;
+       animation-timing-function: ease-out; 
+       animation-delay: 1s;
+       animation-fill-mode: forwards;
+       opacity: 0;
         &_heading {
             font-size: 3.8rem;
         }
@@ -223,7 +225,19 @@ const Wrapper = styled.div`
     }
 
     }
+
+    //animation
+    @keyframes moveInLeft {
+    0% {
+      opacity: 0;
+      transform: translateX(-200px); }
+    80% {
+      transform: translateX(10px); }
+    100% {
+      opacity: 1;
+      transform: translate(0); } }
  
 `
+
 
 export default Hero

@@ -13,7 +13,8 @@ export const ComingSoon = () => {
 
 
 const Wrapper = styled.div`
-padding: 10rem;
+padding: 1rem;
+height: 80vh;
 .coming_soon_box {
         display: block;
         position: absolute;

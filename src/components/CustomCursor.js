@@ -1,7 +1,7 @@
 import React, { useEffect, useRef } from 'react'
 import styled from 'styled-components';
 
-export const CustomCursor = () => {
+const CustomCursor = () => {
     let mainCursor = useRef(null);
     let secondaryCursor = useRef(null);
 
@@ -272,3 +272,5 @@ const Wrapper = styled.div`
   }
 }
 `
+
+export default CustomCursor
