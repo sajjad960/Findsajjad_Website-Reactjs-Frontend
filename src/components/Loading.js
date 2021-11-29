@@ -10,7 +10,32 @@ const Loading = () => {
 }
 
 const Wrapper = styled.div`
- 
+    margin: 0 auto;
+   display: block;
+    text-align: center;
+    overflow-y: hidden
+    ;
+     .loader-logo {
+            margin-top: 41vh;
+             width: 7rem;
+             height: 7rem;
+            animation: rotate 1.5s ease infinite;
+        }
+    @media (max-width: 1000px) {
+        .loader-logo {
+            margin-left: auto;
+        }
+    }
+
+    //animation
+     @keyframes rotate {
+    0% {
+      opacity: 1;
+      transform: rotate(0); }
+   
+    100% {
+      opacity: 1;
+      transform: rotate(360deg); } }
 `
 
 export default Loading

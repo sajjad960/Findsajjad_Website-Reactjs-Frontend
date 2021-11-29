@@ -29,7 +29,7 @@ function App() {
   return (
     <div className="App">
       <Router>
-          <CustomCursor/>
+        <CustomCursor/>
         <NavBar/>
         <Sidebar/>
         {/* <Bip/> */}
