@@ -128,6 +128,7 @@ const Wrapper = styled.div`
     .svgcontainer {
         width: 85%;
        position: relative;
+      
     }
 
     @media (max-width: 1700px) {
@@ -164,7 +165,7 @@ const Wrapper = styled.div`
     }
     .animation_area {
         width: 90%;
-        margin-top: -3rem;
+        margin-top: 0rem;
        margin-left: 5rem;
     }
 
@@ -189,7 +190,7 @@ const Wrapper = styled.div`
     }
     .animation_area {
         width: 90%;
-        margin-top: -3rem;
+      
        margin-left: 5rem;
     }
 
@@ -215,7 +216,6 @@ const Wrapper = styled.div`
     }
     .animation_area {
         width: 90%;
-        margin-top: -3rem;
        margin-left: .5rem;
     }
 

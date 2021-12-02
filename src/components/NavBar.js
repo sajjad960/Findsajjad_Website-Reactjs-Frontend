@@ -9,7 +9,7 @@ import { links } from '../Data/constant'
 
 export const NavBar = () => {
 const { openSidebar } = useGlobalContext();
-const location = useLocation()
+const location = useLocation();
 
     return (
         <Wrapper>
@@ -46,7 +46,7 @@ const location = useLocation()
 
                         
                     }
-
+                    
                     {/* showing projects link btn */}
                     {
                             location.pathname === '/' ? <li >

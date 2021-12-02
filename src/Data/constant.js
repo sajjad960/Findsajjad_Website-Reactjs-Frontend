@@ -4,11 +4,11 @@ export const links = [
       text: "Me",
       url: "/me",
     },
-    {
-      id: 2,
-      text: "Price",
-      url: "/price",
-    },
+    // {
+    //   id: 2,
+    //   text: "Price",
+    //   url: "/price",
+    // },
     {
       id: 3,
       text: "Contacts",

@@ -15,7 +15,7 @@ export const GetStartBtn = () => {
 
 const Wrapper = styled.div`
     position: relative;
-    z-index: 500;
+    z-index: 5000;
 
    button {
        background-color: var(--clr-red-dark);
