@@ -1,8 +1,8 @@
 # Findsajjad - A personal branding website.
 
 ### Tecnology For Frontend
-   React JS.
-   Plain CSS.
+   React JS.<br/>
+   Plain CSS.<br/>
    Styled-Components [Learn/Check](https://styled-components.com/).
 
 ## Installation and start
