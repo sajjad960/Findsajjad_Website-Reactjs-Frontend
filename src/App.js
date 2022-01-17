@@ -20,11 +20,11 @@ function App() {
     setTimeout(() => setSpinner(false), 2500)
   }, []);
 
-  if(spinner) {
-    return (
-      <Loading/>
-    )
-  }
+  // if(spinner) {
+  //   return (
+  //     <Loading/>
+  //   )
+  // }
 
   return (
     <div className="App">
